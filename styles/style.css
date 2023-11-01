@@ -1,50 +1,76 @@
 /**************/
 /* CSS REMEDY */
 /**************/
+@font-face {
+  font-family: "Act_Of_Rejection";
+  src: url("/fonts/Act_Of_Rejection.ttf");
+}
 
 /* naar een idee van Jen Simmons */
-*, *::after, *::before {
-  box-sizing:border-box;  
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
 }
 
 body {
-  margin:0;
+  margin: 0;
 }
 
 button:not([disabled]) {
-  cursor:pointer;
+  cursor: pointer;
 }
 
 img {
-  max-width:100%;
+  max-width: 100%;
 }
-
-
-
-
 
 /*********************/
 /* CUSTOM PROPERTIES */
 /*********************/
 
 :root {
-  --color-headings:crimson
+  --color-headings: crimson;
   /* ... */
-
 }
-
-
-
-
 
 /********************/
 /* ALGEMENE STYLING */
 /********************/
 
 h1 {
-  color:var(--color-headings);
+  background: -webkit-linear-gradient(yellow, red);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
+  font-family: Act_Of_Rejection;
+  font-size: 4em;
+  text-shadow: 2px 5px black;
+}
+
+section {
+  display: grid;
+  place-items: center;
+}
+
+ul {
+  display: grid;
+  place-items: center;
+  grid-template-columns: repeat(4, 0fr);
+}
+
+li {
+  background-color: blueviolet;
+  aspect-ratio: 1;
+  display: grid;
+  place-items: center;
+  width: 10em;
+  margin: 1em;
+}
+
+li:hover {
+  border-style: solid;
+  border-color: yellow;
 }
 
 /* ... */
-
-
