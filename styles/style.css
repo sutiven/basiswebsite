@@ -95,7 +95,7 @@ h2 {
   }
 }
 
-section {
+body > section:nth-of-type(1) {
   padding-top: 20em;
   display: grid;
   place-items: center;
@@ -108,19 +108,56 @@ ul {
   place-items: center;
   grid-template-columns: repeat(4, 1fr);
 }
-
 li {
+  list-style: none;
+}
+
+li button {
   background-color: var(--bg-color-selection);
   aspect-ratio: 1;
   display: grid;
   place-items: center;
   width: 7em;
   margin: 1em;
+  border: none;
 }
 
-li:hover {
+li button:hover {
   border-style: solid;
   border-color: var(--border-color-hover);
 }
 
+article {
+  padding: 1em;
+  background-color: aqua;
+  width: 80%;
+  display: flex;
+}
+article > section {
+  display: flex;
+  flex-direction: column;
+  padding: 1em;
+}
+
+article img {
+  display: flex;
+  margin: 1em;
+}
+
+article ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+}
+
+article ul li {
+  width: 80%;
+  display: flex;
+  justify-content: start;
+}
+
+article ul li p {
+  display: flex;
+  font-family: ;
+}
 /* ... */
