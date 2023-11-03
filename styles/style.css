@@ -29,11 +29,10 @@
 
 body {
   background-color: var(--bg-color);
-  background-image: url("../images/sf_worldmap/SF\ Map.png");
-  background-size: 60%;
-  background-repeat: no-repeat;
-  background-position: center top;
   margin: 0;
+
+  display: grid;
+  grid-template-columns: 1fr 20em;
 }
 /* body p {
   display: none;
@@ -41,7 +40,13 @@ body {
 /* body.ryu p {
   display: block;
 } */
-body.ryu {
+body > section {
+  background-image: url("../images/sf_worldmap/SF\ Map.png");
+  background-size: 60%;
+  background-repeat: no-repeat;
+  background-position: center top;
+}
+body.ryu > section {
   background-image: url("../images/sf_worldmap/SF\ Map_Japan.png");
 }
 
@@ -67,6 +72,38 @@ body.jaimie {
   background-image: url("../images/sf_worldmap/SF\ Map_China.png");
 }
 
+article:nth-of-type(1) {
+  display: flex;
+}
+article:nth-of-type(2) {
+  position: absolute;
+  left: -9999em;
+}
+article:nth-of-type(3) {
+  position: absolute;
+  left: -9999em;
+}
+article:nth-of-type(4) {
+  position: absolute;
+  left: -9999em;
+}
+article:nth-of-type(5) {
+  position: absolute;
+  left: -9999em;
+}
+article:nth-of-type(6) {
+  position: absolute;
+  left: -9999em;
+}
+article:nth-of-type(7) {
+  position: absolute;
+  left: -9999em;
+}
+article:nth-of-type(8) {
+  position: absolute;
+  left: -9999em;
+}
+
 button:not([disabled]) {
   cursor: pointer;
 }
@@ -82,7 +119,7 @@ img {
 /********************/
 /* ALGEMENE STYLING */
 /********************/
-h1 img {
+h1 {
   position: absolute;
   animation-name: logo;
   animation-duration: 1s;
@@ -127,7 +164,8 @@ h2 {
 }
 
 body > section:nth-of-type(1) {
-  padding-top: 20em;
+  align-content: end;
+  gap: 5em;
   display: grid;
   place-items: center;
 }
@@ -161,8 +199,8 @@ li button:hover {
 article {
   padding: 1em;
   background-color: aqua;
-  width: 80%;
   display: flex;
+  justify-content: right;
 }
 article > section {
   display: flex;
