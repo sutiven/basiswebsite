@@ -29,11 +29,42 @@
 
 body {
   background-color: var(--bg-color);
-  background-image: url(/images/world_map_dots.png);
+  background-image: url("../images/sf_worldmap/SF\ Map.png");
   background-size: 60%;
   background-repeat: no-repeat;
   background-position: center top;
   margin: 0;
+}
+/* body p {
+  display: none;
+} */
+/* body.ryu p {
+  display: block;
+} */
+body.ryu {
+  background-image: url("../images/sf_worldmap/SF\ Map_Japan.png");
+}
+
+body.vega {
+  background-image: url("../images/sf_worldmap/SF\ Map_India.png");
+}
+body.elfuerte {
+  background-image: url("../images/sf_worldmap/SF\ Map_Mexico.png");
+}
+body.ibuki {
+  background-image: url("../images/sf_worldmap/SF\ Map_Japan.png");
+}
+body.balrog {
+  background-image: url("../images/sf_worldmap/SF\ Map_England.png");
+}
+body.lily {
+  background-image: url("../images/sf_worldmap/SF\ Map_American_Tribe.png");
+}
+body.deejay {
+  background-image: url("../images/sf_worldmap/SF\ Map_Jamaica.png");
+}
+body.jaimie {
+  background-image: url("../images/sf_worldmap/SF\ Map_China.png");
 }
 
 button:not([disabled]) {
