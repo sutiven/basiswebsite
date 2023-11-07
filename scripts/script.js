@@ -27,10 +27,19 @@ var materialTekst = document.querySelector("#nameMaterial");
 var descriptionTekst = document.querySelector("#nameDescription");
 
 // audio variablen
-var ryuAudio = document.querySelector("section ul li audio");
+var ryuAudio = document.querySelector("section ul li:nth-of-type(1) audio");
+var vegaAudio = document.querySelector("section ul li:nth-of-type(2) audio");
+var elfuerteAudio = document.querySelector(
+  "section ul li:nth-of-type(3) audio"
+);
+var ibukiAudio = document.querySelector("section ul li:nth-of-type(4) audio");
+var balrogAudio = document.querySelector("section ul li:nth-of-type(5) audio");
+var lilyAudio = document.querySelector("section ul li:nth-of-type(6) audio");
+var deejayAudio = document.querySelector("section ul li:nth-of-type(7) audio");
+var jaimieAudio = document.querySelector("section ul li:nth-of-type(8) audio");
 
-// event listeners
-ryuButton.onclick = ryuInfo;
+// button click functie geven
+ryuButton.onclick = combinedRyuButton;
 vegaButton.onclick = vegaInfo;
 elfuerteButton.onclick = elfuerteInfo;
 ibukiButton.onclick = ibukiInfo;
@@ -39,7 +48,15 @@ lilyButton.onclick = lilyInfo;
 deejayButton.onclick = deejayInfo;
 jaimieButton.onclick = jaimieInfo;
 
+//event listener audio
 ryuButton.addEventListener("click", ryuSfx);
+vegaButton.addEventListener("click", vegaSfx);
+elfuerteButton.addEventListener("click", elfuerteSfx);
+ibukiButton.addEventListener("click", ibukiSfx);
+balrogButton.addEventListener("click", balrogSfx);
+lilyButton.addEventListener("click", lilySfx);
+deejayButton.addEventListener("click", deejaySfx);
+jaimieButton.addEventListener("click", jaimieSfx);
 
 // functies dat gebeurt als je op knop drukt
 function ryuInfo() {
@@ -174,4 +191,74 @@ function ryuSfx() {
   } else {
     ryuAudio.pause();
   }
+}
+function vegaSfx() {
+  if (vegaAudio.paused) {
+    vegaAudio.play();
+  } else {
+    vegaAudio.pause();
+  }
+}
+function elfuerteSfx() {
+  if (elfuerteAudio.paused) {
+    elfuerteAudio.play();
+  } else {
+    elfuerteAudio.pause();
+  }
+}
+function ibukiSfx() {
+  if (ibukiAudio.paused) {
+    ibukiAudio.play();
+  } else {
+    ibukiAudio.pause();
+  }
+}
+function balrogSfx() {
+  if (balrogAudio.paused) {
+    balrogAudio.play();
+  } else {
+    balrogAudio.pause();
+  }
+}
+function lilySfx() {
+  if (lilyAudio.paused) {
+    lilyAudio.play();
+  } else {
+    lilyAudio.pause();
+  }
+}
+function deejaySfx() {
+  if (deejayAudio.paused) {
+    deejayAudio.play();
+  } else {
+    deejayAudio.pause();
+  }
+}
+function jaimieSfx() {
+  if (jaimieAudio.paused) {
+    jaimieAudio.play();
+  } else {
+    jaimieAudio.pause();
+  }
+}
+
+//easter egg
+var count = 0;
+
+function ryuSpam() {
+  if (count >= 3) {
+    count = 0;
+    console.log(count);
+    characterGif.src = "./gifs/ryu_spam.gif";
+  } else {
+    count++;
+    console.log(count);
+    characterGif.src = "./gifs/Ryu.gif";
+  }
+}
+
+//hierdoor kan ik meerdere functies op 1 button zetten, geholpen door Justin
+function combinedRyuButton() {
+  ryuInfo();
+  ryuSpam();
 }

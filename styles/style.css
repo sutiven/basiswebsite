@@ -32,6 +32,7 @@ body {
   margin: 0;
   display: grid;
   grid-template-columns: 1fr 20em;
+  cursor: url("/images/player_1_cursor.png") 28 28, auto;
 }
 
 body > section {
@@ -201,7 +202,7 @@ li button:hover {
   /* https://kovart.github.io/dashed-border-generator/ */
   background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' stroke='%23DE1D1DFF' stroke-width='16' stroke-dasharray='53' stroke-dashoffset='26' stroke-linecap='square'/%3e%3c/svg%3e");
   border-color: var(--border-color-hover);
-  /* cursor: url("/images/hadouken_cursor.png") 64 64, auto; */
+  cursor: url("/images/hadouken_cursor.png") 28 28, auto;
 }
 
 li button img:hover {
