@@ -2,8 +2,8 @@
 /* CSS REMEDY */
 /**************/
 @font-face {
-  font-family: "Act_Of_Rejection";
-  src: url("/fonts/Act_Of_Rejection.ttf");
+  font-family: "PixelifySans";
+  src: url("/fonts/PixelifySans-VariableFont_wght.ttf");
 }
 @font-face {
   font-family: "hyper-street-fighter-2-anniversary-edition";
@@ -11,12 +11,12 @@
 }
 
 :root {
-  --color-headings: crimson;
   --bg-color: rgb(7, 0, 131);
   --text-color: white;
   --text-shadow-color: black;
-  --bg-color-selection: blueviolet;
+  --bg-color-selection: rgb(167, 87, 233);
   --border-color-hover: yellow;
+  --article-color: rgb(148, 18, 18);
   /* ... */
 }
 
@@ -33,12 +33,7 @@ body {
   display: grid;
   grid-template-columns: 1fr 20em;
 }
-/* body p {
-  display: none;
-} */
-/* body.ryu p {
-  display: block;
-} */
+
 body > section {
   background-image: url("../images/sf_worldmap/SF\ Map.png");
   background-size: 60%;
@@ -125,6 +120,11 @@ section > img {
 /********************/
 /* ALGEMENE STYLING */
 /********************/
+p {
+  color: white;
+  font-family: PixelifySans;
+}
+
 h1 {
   position: absolute;
   animation-name: logo;
@@ -192,19 +192,32 @@ li button {
   aspect-ratio: 1;
   display: grid;
   place-items: center;
-  width: 7em;
+  width: 8em;
   margin: 1em;
   border: none;
 }
 
 li button:hover {
-  border-style: solid;
+  /* https://kovart.github.io/dashed-border-generator/ */
+  background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' stroke='%23DE1D1DFF' stroke-width='16' stroke-dasharray='53' stroke-dashoffset='26' stroke-linecap='square'/%3e%3c/svg%3e");
   border-color: var(--border-color-hover);
+  /* cursor: url("/images/hadouken_cursor.png") 64 64, auto; */
+}
+
+li button img:hover {
+  filter: drop-shadow(0 0);
+}
+
+li button:focus-visible {
+  /* https://kovart.github.io/dashed-border-generator/ */
+  background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' stroke='%23DE1D1DFF' stroke-width='16' stroke-dasharray='53' stroke-dashoffset='26' stroke-linecap='square'/%3e%3c/svg%3e");
+  border-color: var(--border-color-hover);
+  outline: none;
 }
 
 article {
   padding: 1em;
-  background-color: aqua;
+  background-color: var(--article-color);
   position: relative;
   height: calc(100% - 3em);
   justify-content: center;
@@ -213,10 +226,6 @@ article {
   display: flex;
   align-items: flex-start;
   height: 100vh;
-}
-
-article > section > img {
-  width: 0em;
 }
 
 article > img {

@@ -1,12 +1,15 @@
 // JavaScript Document
-console.log("Howdy!");
 
+// body variable
 var bodyElement = document.querySelector("body");
 
+// gif variable
 var characterGif = document.querySelector("section > img");
 
+// vlag variable
 var vlagInformatie = document.querySelector("article > img");
 
+// knoppen variable
 var ryuButton = document.querySelector("section ul li:nth-of-type(1)");
 var vegaButton = document.querySelector("section ul li:nth-of-type(2)");
 var elfuerteButton = document.querySelector("section ul li:nth-of-type(3)");
@@ -16,12 +19,17 @@ var lilyButton = document.querySelector("section ul li:nth-of-type(6)");
 var deejayButton = document.querySelector("section ul li:nth-of-type(7)");
 var jaimieButton = document.querySelector("section ul li:nth-of-type(8)");
 
+// informatietekst in article
 var nameTekst = document.querySelector("#nameWeapon");
 var originTekst = document.querySelector("#nameOrigin");
 var characterTekst = document.querySelector("#nameCharacter");
 var materialTekst = document.querySelector("#nameMaterial");
 var descriptionTekst = document.querySelector("#nameDescription");
 
+// audio variablen
+var ryuAudio = document.querySelector("section ul li audio");
+
+// event listeners
 ryuButton.onclick = ryuInfo;
 vegaButton.onclick = vegaInfo;
 elfuerteButton.onclick = elfuerteInfo;
@@ -31,14 +39,21 @@ lilyButton.onclick = lilyInfo;
 deejayButton.onclick = deejayInfo;
 jaimieButton.onclick = jaimieInfo;
 
+ryuButton.addEventListener("click", ryuSfx);
+
+// functies dat gebeurt als je op knop drukt
 function ryuInfo() {
+  // ``achtergrond img veranderen
   bodyElement.className = "";
   bodyElement.classList.add("ryu");
 
+  //   gif veranderen
   characterGif.src = "./gifs/Ryu.gif";
 
+  //   vlag in article veranderen
   vlagInformatie.src = "./images/country_flags/Japan.png";
 
+  //   tekst in article veranderen
   nameTekst.textContent = "Name: Karate Gloves";
   originTekst.textContent = "Origin Country: Japan";
   characterTekst.textContent = "Character: Ryu Hiroshi";
@@ -150,4 +165,13 @@ function jaimieInfo() {
   materialTekst.textContent = "Material: Hard wood";
   descriptionTekst.textContent =
     "Description: The drink in Jamie's jug is called Yakutou (薬湯), an herbal tea instead of alcohol. Matsumoto followed up by calling it a special drink and everyone in the room started laughing. Drunk style martial arts, also known as Drunken Fist or Zui Quan (醉拳) in Chinese, is a unique and theatrical martial arts style that imitates the movements and behavior of a drunken person. It is characterized by its fluid, unpredictable, and erratic movements that make it appear as though the practitioner is stumbling or swaying like someone who has consumed alcohol.";
+}
+
+// audio toevoegen
+function ryuSfx() {
+  if (ryuAudio.paused) {
+    ryuAudio.play();
+  } else {
+    ryuAudio.pause();
+  }
 }
