@@ -30,7 +30,6 @@
 body {
   background-color: var(--bg-color);
   margin: 0;
-
   display: grid;
   grid-template-columns: 1fr 20em;
 }
@@ -50,25 +49,25 @@ body.ryu > section {
   background-image: url("../images/sf_worldmap/SF\ Map_Japan.png");
 }
 
-body.vega {
+body.vega > section {
   background-image: url("../images/sf_worldmap/SF\ Map_India.png");
 }
-body.elfuerte {
+body.elfuerte > section {
   background-image: url("../images/sf_worldmap/SF\ Map_Mexico.png");
 }
-body.ibuki {
+body.ibuki > section {
   background-image: url("../images/sf_worldmap/SF\ Map_Japan.png");
 }
-body.balrog {
+body.balrog > section {
   background-image: url("../images/sf_worldmap/SF\ Map_England.png");
 }
-body.lily {
+body.lily > section {
   background-image: url("../images/sf_worldmap/SF\ Map_American_Tribe.png");
 }
-body.deejay {
+body.deejay > section {
   background-image: url("../images/sf_worldmap/SF\ Map_Jamaica.png");
 }
-body.jaimie {
+body.jaimie > section {
   background-image: url("../images/sf_worldmap/SF\ Map_China.png");
 }
 
@@ -110,6 +109,13 @@ button:not([disabled]) {
 
 img {
   max-width: 100%;
+}
+
+section > img {
+  width: 15%;
+  position: fixed;
+  left: 3em;
+  bottom: 3em;
 }
 
 /*********************/
@@ -199,18 +205,22 @@ li button:hover {
 article {
   padding: 1em;
   background-color: aqua;
+  position: relative;
+  height: calc(100% - 3em);
+  justify-content: center;
+  overflow: hidden;
+  overflow-y: auto;
   display: flex;
-  justify-content: right;
-}
-article > section {
-  display: flex;
-  flex-direction: column;
-  padding: 1em;
+  align-items: flex-start;
+  height: 100vh;
 }
 
-article img {
-  display: flex;
-  margin: 1em;
+article > section > img {
+  width: 0em;
+}
+
+article > img {
+  width: 20%;
 }
 
 article ul {
@@ -227,6 +237,5 @@ article ul li {
 
 article ul li p {
   display: flex;
-  font-family: ;
 }
 /* ... */
