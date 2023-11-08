@@ -104,6 +104,7 @@ function ryuInfo() {
   descriptionTekst.textContent =
     "Description: Ryu wears a white gi, as a symbol of his Japanese heritage, with the Japanese symbols for the Fūrinkazan 風林火山 Hepburn: Wind, Forest, Fire, Mountain on his belt as well as a stylised version on his gloves. Karate gloves, also known as karate sparring gloves or mitts, are protective gear worn by martial artists during karate sparring or training sessions. These gloves are designed to provide some degree of protection to the hands and knuckles while allowing the martial artist to maintain mobility and dexterity.";
 }
+
 function vegaInfo() {
   bodyElement.className = "";
   bodyElement.classList.add("vega");
@@ -127,6 +128,9 @@ function vegaInfo() {
   materialTekst.textContent = "Material: Metal";
   descriptionTekst.textContent =
     "Description: Hand-fighting weapons are small, portable weapons, often worn covertly, and usually intended to wound or maim rather than kill. One such weapon, designed for concealment, was the bagh nakh or 'Tiger's Claw'. It was worn under a glove or between the fingers to give the wearer the advantage of surprise in duels and street fights.";
+
+  // easter egg  ervoor zorgen dat de count reset als je een andere weapon select
+  count = 0;
 }
 function elfuerteInfo() {
   bodyElement.className = "";
@@ -151,6 +155,8 @@ function elfuerteInfo() {
   materialTekst.textContent = "Material: Lightweight cotton material";
   descriptionTekst.textContent =
     "Description: Masks (máscaras) have been used dating back to the beginnings of Lucha Libre in the early part of the 20th century, and have a historical significance to Mexico in general, dating to the days of the Aztecs. Early masks were very simple with basic colors to distinguish the wrestler.";
+
+  count = 0;
 }
 function ibukiInfo() {
   bodyElement.className = "";
@@ -175,6 +181,8 @@ function ibukiInfo() {
   materialTekst.textContent = "Material: Metal";
   descriptionTekst.textContent =
     "Description: According to Akiman, the team incorporated Koppōjutsu into Ibuki's ninjutsu-based moveset because the fighting style was gaining popularity around the time she was being designed. A kunai is a traditional Japanese tool that has a long history of use, both as a farming implement and as a concealed weapon. It is often described as a type of knife or dagger and is characterized by its simple design, which consists of a straight, pointed blade with a handle at the opposite end.";
+
+  count = 0;
 }
 function balrogInfo() {
   bodyElement.className = "";
@@ -199,6 +207,8 @@ function balrogInfo() {
   materialTekst.textContent = "Material: Polyurethane Leather (PU)";
   descriptionTekst.textContent =
     "Description: In the Street Fighter series, Balrog, who is based on Mike Tyson, uses his signature Peek-a-Boo style. Boxing gloves are specialized protective gear designed for boxers and other combat sports practitioners to protect their hands during training, sparring, and competitive matches. They serve several important functions, including hand protection, wrist support, and enhancing the safety of both the user and their sparring partner.";
+
+  count = 0;
 }
 function lilyInfo() {
   bodyElement.className = "";
@@ -223,6 +233,8 @@ function lilyInfo() {
   materialTekst.textContent = "Material: Antler and Wood";
   descriptionTekst.textContent =
     "Description: A club used as a weapon or ceremonial object by various American Indian peoples and usually consisting in the Great Lakes region of a flat curved club with a knobbed head and in the Plains region of a piece of stone fastened to the end of a slender stick covered with leather.";
+
+  count = 0;
 }
 function deejayInfo() {
   bodyElement.className = "";
@@ -246,6 +258,8 @@ function deejayInfo() {
   materialTekst.textContent = "Material: Limestone";
   descriptionTekst.textContent =
     "Description: The Speedy Maracas (マラカスビート, Marakasu Bīto?, Maracas' Beat) is one of Dee Jay's unique attacks, first introduced in Street Fighter 6. Chac Chac’s are a type of musical instrument that belongs to the percussion family. They are commonly associated with Latin American and Caribbean music, and they are often used to create rhythmic and percussive sounds.";
+
+  count = 0;
 }
 function jaimieInfo() {
   bodyElement.className = "";
@@ -269,6 +283,8 @@ function jaimieInfo() {
   materialTekst.textContent = "Material: Hard wood";
   descriptionTekst.textContent =
     "Description: The drink in Jamie's jug is called Yakutou (薬湯), an herbal tea instead of alcohol. Matsumoto followed up by calling it a special drink and everyone in the room started laughing. Drunk style martial arts, also known as Drunken Fist or Zui Quan (醉拳) in Chinese, is a unique and theatrical martial arts style that imitates the movements and behavior of a drunken person. It is characterized by its fluid, unpredictable, and erratic movements that make it appear as though the practitioner is stumbling or swaying like someone who has consumed alcohol.";
+
+  count = 0;
 }
 
 // audio toevoegen
