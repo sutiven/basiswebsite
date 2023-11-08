@@ -9,14 +9,18 @@
   font-family: "hyper-street-fighter-2-anniversary-edition";
   src: url(/fonts/hyper-street-fighter-2-anniversary-edition.ttf);
 }
-
+/*********************/
+/* CUSTOM PROPERTIES */
+/*********************/
 :root {
   --bg-color: rgb(7, 0, 131);
   --text-color: white;
   --text-shadow-color: black;
   --bg-color-selection: rgb(167, 87, 233);
   --border-color-hover: rgb(207, 25, 25);
+  --border-color-hover-2P: rgb(23, 143, 243);
   --article-color: rgb(148, 18, 18);
+  --button-selected-state: rgb(111, 51, 161);
   /* ... */
 }
 
@@ -41,6 +45,8 @@ body > section {
   background-repeat: no-repeat;
   background-position: center top;
 }
+
+/* De achtergrond veranderd per button/wapen */
 body.ryu > section {
   background-image: url("../images/sf_worldmap/SF\ Map_Japan.png");
 }
@@ -67,36 +73,8 @@ body.jaimie > section {
   background-image: url("../images/sf_worldmap/SF\ Map_China.png");
 }
 
-article:nth-of-type(1) {
+article {
   display: flex;
-}
-article:nth-of-type(2) {
-  position: absolute;
-  left: -9999em;
-}
-article:nth-of-type(3) {
-  position: absolute;
-  left: -9999em;
-}
-article:nth-of-type(4) {
-  position: absolute;
-  left: -9999em;
-}
-article:nth-of-type(5) {
-  position: absolute;
-  left: -9999em;
-}
-article:nth-of-type(6) {
-  position: absolute;
-  left: -9999em;
-}
-article:nth-of-type(7) {
-  position: absolute;
-  left: -9999em;
-}
-article:nth-of-type(8) {
-  position: absolute;
-  left: -9999em;
 }
 
 button:not([disabled]) {
@@ -113,10 +91,6 @@ section > img {
   left: 3em;
   bottom: 3em;
 }
-
-/*********************/
-/* CUSTOM PROPERTIES */
-/*********************/
 
 /********************/
 /* ALGEMENE STYLING */
@@ -181,6 +155,7 @@ ul {
   place-items: center;
   grid-template-columns: repeat(4, 1fr);
 }
+
 li {
   list-style: none;
 }
@@ -197,7 +172,7 @@ li button {
 }
 
 li button.selected {
-  background-color: rebeccapurple;
+  background-color: var(--button-selected-state);
 }
 
 li button:hover {
@@ -223,7 +198,7 @@ li button img:hover {
 
 li button:focus-visible {
   /* https://kovart.github.io/dashed-border-generator/ */
-  background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' stroke='%23DE1D1DFF' stroke-width='16' stroke-dasharray='53' stroke-dashoffset='26' stroke-linecap='square'/%3e%3c/svg%3e");
+  background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' stroke='%23178FF3FF' stroke-width='16' stroke-dasharray='52' stroke-dashoffset='25' stroke-linecap='square'/%3e%3c/svg%3e");
   border-color: var(--border-color-hover);
   outline: none;
 }
@@ -231,8 +206,8 @@ li button:focus-visible {
 li button:focus-visible::before {
   position: absolute;
   top: -0.75em;
-  content: "1P";
-  color: var(--border-color-hover);
+  content: "2P";
+  color: var(--border-color-hover-2P);
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   font-weight: 800;
   font-size: 2em;
