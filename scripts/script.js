@@ -10,21 +10,37 @@ var characterGif = document.querySelector("section > img");
 var vlagInformatie = document.querySelector("article > img");
 
 // knoppen variable
-var ryuButton = document.querySelector("section ul li:nth-of-type(1)");
-var vegaButton = document.querySelector("section ul li:nth-of-type(2)");
-var elfuerteButton = document.querySelector("section ul li:nth-of-type(3)");
-var ibukiButton = document.querySelector("section ul li:nth-of-type(4)");
-var balrogButton = document.querySelector("section ul li:nth-of-type(5)");
-var lilyButton = document.querySelector("section ul li:nth-of-type(6)");
-var deejayButton = document.querySelector("section ul li:nth-of-type(7)");
-var jaimieButton = document.querySelector("section ul li:nth-of-type(8)");
+var ryuButton = document.querySelector("section ul li:nth-of-type(1) button");
+var vegaButton = document.querySelector("section ul li:nth-of-type(2) button");
+var elfuerteButton = document.querySelector(
+  "section ul li:nth-of-type(3) button"
+);
+var ibukiButton = document.querySelector("section ul li:nth-of-type(4) button");
+var balrogButton = document.querySelector(
+  "section ul li:nth-of-type(5) button"
+);
+var lilyButton = document.querySelector("section ul li:nth-of-type(6) button");
+var deejayButton = document.querySelector(
+  "section ul li:nth-of-type(7) button"
+);
+var jaimieButton = document.querySelector(
+  "section ul li:nth-of-type(8) button"
+);
 
 // informatietekst in article
-var nameTekst = document.querySelector("#nameWeapon");
-var originTekst = document.querySelector("#nameOrigin");
-var characterTekst = document.querySelector("#nameCharacter");
-var materialTekst = document.querySelector("#nameMaterial");
-var descriptionTekst = document.querySelector("#nameDescription");
+var nameTekst = document.querySelector("article > ul > li:nth-of-type(1) > p");
+var originTekst = document.querySelector(
+  "article > ul > li:nth-of-type(2) > p"
+);
+var characterTekst = document.querySelector(
+  "article > ul > li:nth-of-type(3) > p"
+);
+var materialTekst = document.querySelector(
+  "article > ul > li:nth-of-type(4) > p"
+);
+var descriptionTekst = document.querySelector(
+  "article > ul > li:nth-of-type(5) > p"
+);
 
 // audio variablen
 var ryuAudio = document.querySelector("section ul li:nth-of-type(1) audio");
@@ -64,6 +80,16 @@ function ryuInfo() {
   bodyElement.className = "";
   bodyElement.classList.add("ryu");
 
+  // selected aangemaakt
+  ryuButton.classList.add("selected");
+  vegaButton.classList.remove("selected");
+  elfuerteButton.classList.remove("selected");
+  ibukiButton.classList.remove("selected");
+  balrogButton.classList.remove("selected");
+  lilyButton.classList.remove("selected");
+  deejayButton.classList.remove("selected");
+  jaimieButton.classList.remove("selected");
+
   //   gif veranderen
   characterGif.src = "./gifs/Ryu.gif";
 
@@ -82,6 +108,15 @@ function vegaInfo() {
   bodyElement.className = "";
   bodyElement.classList.add("vega");
 
+  ryuButton.classList.remove("selected");
+  vegaButton.classList.add("selected");
+  elfuerteButton.classList.remove("selected");
+  ibukiButton.classList.remove("selected");
+  balrogButton.classList.remove("selected");
+  lilyButton.classList.remove("selected");
+  deejayButton.classList.remove("selected");
+  jaimieButton.classList.remove("selected");
+
   characterGif.src = "./gifs/Vega.gif";
 
   vlagInformatie.src = "./images/country_flags/India.png";
@@ -96,6 +131,15 @@ function vegaInfo() {
 function elfuerteInfo() {
   bodyElement.className = "";
   bodyElement.classList.add("elfuerte");
+
+  ryuButton.classList.remove("selected");
+  vegaButton.classList.remove("selected");
+  elfuerteButton.classList.add("selected");
+  ibukiButton.classList.remove("selected");
+  balrogButton.classList.remove("selected");
+  lilyButton.classList.remove("selected");
+  deejayButton.classList.remove("selected");
+  jaimieButton.classList.remove("selected");
 
   characterGif.src = "./gifs/El Fuerte.gif";
 
@@ -112,6 +156,15 @@ function ibukiInfo() {
   bodyElement.className = "";
   bodyElement.classList.add("ibuki");
 
+  ryuButton.classList.remove("selected");
+  vegaButton.classList.remove("selected");
+  elfuerteButton.classList.remove("selected");
+  ibukiButton.classList.add("selected");
+  balrogButton.classList.remove("selected");
+  lilyButton.classList.remove("selected");
+  deejayButton.classList.remove("selected");
+  jaimieButton.classList.remove("selected");
+
   characterGif.src = "./gifs/Ibuki.gif";
 
   vlagInformatie.src = "./images/country_flags/Japan.png";
@@ -126,6 +179,15 @@ function ibukiInfo() {
 function balrogInfo() {
   bodyElement.className = "";
   bodyElement.classList.add("balrog");
+
+  ryuButton.classList.remove("selected");
+  vegaButton.classList.remove("selected");
+  elfuerteButton.classList.remove("selected");
+  ibukiButton.classList.remove("selected");
+  balrogButton.classList.add("selected");
+  lilyButton.classList.remove("selected");
+  deejayButton.classList.remove("selected");
+  jaimieButton.classList.remove("selected");
 
   characterGif.src = "./gifs/Balrog.gif";
 
@@ -142,6 +204,15 @@ function lilyInfo() {
   bodyElement.className = "";
   bodyElement.classList.add("lily");
 
+  ryuButton.classList.remove("selected");
+  vegaButton.classList.remove("selected");
+  elfuerteButton.classList.remove("selected");
+  ibukiButton.classList.remove("selected");
+  balrogButton.classList.remove("selected");
+  lilyButton.classList.add("selected");
+  deejayButton.classList.remove("selected");
+  jaimieButton.classList.remove("selected");
+
   characterGif.src = "./gifs/Lily.gif";
 
   vlagInformatie.src = "./images/country_flags/Tribal_flag.jpg";
@@ -157,6 +228,14 @@ function deejayInfo() {
   bodyElement.className = "";
   bodyElement.classList.add("deejay");
 
+  ryuButton.classList.remove("selected");
+  vegaButton.classList.remove("selected");
+  elfuerteButton.classList.remove("selected");
+  ibukiButton.classList.remove("selected");
+  balrogButton.classList.remove("selected");
+  lilyButton.classList.remove("selected");
+  deejayButton.classList.add("selected");
+  jaimieButton.classList.remove("selected");
   characterGif.src = "./gifs/Dee Jay.gif";
 
   vlagInformatie.src = "./images/country_flags/Jamaica.png";
@@ -172,6 +251,14 @@ function jaimieInfo() {
   bodyElement.className = "";
   bodyElement.classList.add("jaimie");
 
+  ryuButton.classList.remove("selected");
+  vegaButton.classList.remove("selected");
+  elfuerteButton.classList.remove("selected");
+  ibukiButton.classList.remove("selected");
+  balrogButton.classList.remove("selected");
+  lilyButton.classList.remove("selected");
+  deejayButton.classList.remove("selected");
+  jaimieButton.classList.add("selected");
   characterGif.src = "./gifs/Jamie.gif";
 
   vlagInformatie.src = "./images/country_flags/China.png";
@@ -250,11 +337,21 @@ function ryuSpam() {
     count = 0;
     console.log(count);
     characterGif.src = "./gifs/ryu_spam.gif";
+    characterGif.classList.add("easteregg");
+
+    // ervoor zorgen dat de gif 2 seconden afspeelt
+    setTimeout(removeEasteregg, 2000);
   } else {
     count++;
     console.log(count);
     characterGif.src = "./gifs/Ryu.gif";
   }
+}
+
+// functie om gif te stoppen
+function removeEasteregg() {
+  characterGif.classList.remove("easteregg");
+  characterGif.src = "./gifs/Ryu.gif";
 }
 
 //hierdoor kan ik meerdere functies op 1 button zetten, geholpen door Justin
