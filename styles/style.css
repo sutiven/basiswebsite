@@ -3,11 +3,11 @@
 /**************/
 @font-face {
   font-family: "PixelifySans";
-  src: url("../fonts/PixelifySans-VariableFont_wght.ttf");
+  src: url("/fonts/PixelifySans-VariableFont_wght.ttf");
 }
 @font-face {
   font-family: "hyper-street-fighter-2-anniversary-edition";
-  src: url("../fonts/hyper-street-fighter-2-anniversary-edition.ttf");
+  src: url("/fonts/hyper-street-fighter-2-anniversary-edition.ttf");
 }
 /*********************/
 /* CUSTOM PROPERTIES */
@@ -97,7 +97,7 @@ section > img {
 /********************/
 p {
   color: var(--text-color);
-  font-family: PixelifySans;
+  font-family: "PixelifySans";
 }
 
 h1 {
@@ -122,7 +122,7 @@ h2 {
   margin: 0;
   color: var(--text-color);
   text-align: center;
-  font-family: hyper-street-fighter-2-anniversary-edition;
+  font-family: "hyper-street-fighter-2-anniversary-edition";
   font-size: 2em;
   text-shadow: 2px 5px var(--text-shadow-color);
   animation-name: blink;
