@@ -7,7 +7,7 @@
 }
 @font-face {
   font-family: "hyper-street-fighter-2-anniversary-edition";
-  src: url(/fonts/hyper-street-fighter-2-anniversary-edition.ttf);
+  src: url("/fonts/hyper-street-fighter-2-anniversary-edition.ttf");
 }
 /*********************/
 /* CUSTOM PROPERTIES */
