@@ -1,12 +1,12 @@
 // JavaScript Document
 
-// body variable
+// body variable voor achtergrond
 var bodyElement = document.querySelector("body");
 
-// gif variable
+// gif variable voor personage
 var characterGif = document.querySelector("section > img");
 
-// vlag variable
+// vlag variable voor vlag in article
 var vlagInformatie = document.querySelector("article > img");
 
 // knoppen variable

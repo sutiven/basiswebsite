@@ -94,6 +94,7 @@ section > img {
 p {
   color: var(--text-color);
   font-family: "PixelifySans";
+  text-shadow: 1.5px 1.5px var(--text-shadow-color);
 }
 
 h1 {
